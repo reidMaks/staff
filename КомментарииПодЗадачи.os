@@ -97,7 +97,7 @@
 	
 	Клиент = Новый КлиентВебAPI();
 	Клиент.ИспользоватьСоединение(Соединение);
-	Запрос = "/rest/13083/" + Токен + "/tasks.task.list?filter[RESPONSIBLE_ID]=" + ID + "&filter[!REAL_STATUS]=5&select[0]=ID&select[1]=TITLE";
+	Запрос = "/rest/" + ID + "/" + Токен + "/tasks.task.list?filter[RESPONSIBLE_ID]=" + ID + "&filter[!REAL_STATUS]=5&select[0]=ID&select[1]=TITLE";
 	Результат = Клиент.Получить(Запрос);
 	
 	Если НЕ Результат["result"]["tasks"].Количество() Тогда
